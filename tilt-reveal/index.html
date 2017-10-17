@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2017 by Anthonyec (http://jsbin.com/kohihur/2/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+<meta name="description" content="Image rotation that reveals date">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+<style id="jsbin-css">
+.pictures {
+  padding: 50px;
+}
+
+.picture {
+  position: relative;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.picture:hover .image {
+  transform: rotate(4deg);
+}
+
+.date {
+  font-size: 20px;
+  width: 100%;
+  text-align: right;
+  position: absolute;
+  z-index: 1;
+}
+
+.image {
+  display: block;
+  position: relative;
+  width: 400px;
+  z-index: 2;
+  transform-origin: top left;
+  transition: transform 0.1s ease-in-out;
+}
+</style>
+
+<style>
+  body {
+    margin: 0;
+  }
+
+  .snippet-message {
+    font-size: 16px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    padding: 30px;
+    border-bottom: 1px solid black;
+  }
+</style>
+</head>
+<body>
+  <div class="snippet-message">
+    Test to replicate the effect seen on <a href="http://www.davidblamey.com/">http://www.davidblamey.com/</a>
+  </div>
+
+  <div class="pictures">
+    <div class="picture">
+      <div class="date">2011</div>
+      <img class="image" src="flag.jpg">
+    </div>
+
+    <div class="picture">
+      <div class="date">2011</div>
+      <img class="image" src="flag.jpg">
+    </div>
+
+    <div class="picture">
+      <div class="date">2011</div>
+      <img class="image" src="flag.jpg">
+    </div>
+  </div>
+
+</body>
+</html>
