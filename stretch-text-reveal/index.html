@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2017 by Anthonyec (http://jsbin.com/kesudej/2/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+<style id="jsbin-css">
+.project {
+  font-family: sans-serif;
+  font-size: 45px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.thumbnail {
+  display: inline-block;
+  width: 0px;
+  margin: 0 5px;
+  height: 35px;
+  transition: all 0.2s ease-in-out;
+  margin: 0;
+}
+
+.thumbnail-3 {
+ vertical-align: top;
+}
+
+.project:hover .thumbnail {
+  width: 100px;
+  margin: 0 5px;
+}
+
+.project:hover .thumbnail-1 {
+  width: 120px;
+  height: 60px;
+  margin: 0 5px;
+}
+
+.project:hover .thumbnail-3 {
+  width: 120px;
+  height: 60px;
+  margin: 0 5px;
+}
+</style>
+<style>
+  body {
+    margin: 0;
+  }
+
+  .snippet-body {
+    padding: 25px;
+  }
+
+  .snippet-message {
+    font-size: 16px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    padding: 30px;
+    border-bottom: 1px solid black;
+  }
+</style>
+</head>
+<body>
+  <div class="snippet-message">
+    Test to replicate the effect in the <a href="example.mp4">video</a> on <a href="http://frittordkonkurransen.no/">http://frittordkonkurransen.no/</a>.
+  </div>
+
+  <div class="snippet-body">
+    <div class="project">
+      PRO<img class="thumbnail thumbnail-1" src="http://payload489.cargocollective.com/1/10/326246/12084025/prt_390x133_1476873021_2x.jpg">JECT
+    </div>
+
+    <div class="project">
+      T<img class="thumbnail" src="http://payload489.cargocollective.com/1/10/326246/12084025/prt_390x133_1476873021_2x.jpg">HINGS
+    </div>
+
+    <div class="project">
+      STUF<img class="thumbnail thumbnail-3" src="http://payload489.cargocollective.com/1/10/326246/12084025/prt_390x133_1476873021_2x.jpg">F
+    </div>
+  </div>
+</body>
+</html>
