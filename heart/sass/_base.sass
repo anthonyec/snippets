@@ -1,0 +1,81 @@
+// INIT
+* 
+	-moz-box-sizing:    border-box
+	-webkit-box-sizing: border-box
+	box-sizing:        border-box
+
+body
+	font-family: sans-serif
+
+// BROWSER PREIX MIXINS
+@mixin keyframes ( $name )
+	@-webkit-keyframes #{$name}
+		@content
+	@-moz-keyframes #{$name}
+		@content
+	@-ms-keyframes #{$name}
+		@content
+	@-khtml-keyframes #{$name}
+		@content
+	@keyframes #{$name}
+		@content
+
+@mixin transition ( $prop... )
+	-webkit-transition: $prop
+	-moz-transition: $prop
+	-ms-transition: $prop
+	-khtml-transition: $prop
+	transition: $prop
+
+@mixin transform ( $prop... )
+	-webkit-transform: $prop
+	-moz-transform: $prop
+	-ms-transform: $prop
+	-khtml-transition: $prop
+	transform: $prop
+
+@mixin transform-origin ( $prop... )
+	-webkit-transform-origin: $prop
+	-moz-transform-origin: $prop
+	-ms-transform-origin: $prop
+	-khtml-transition-origin: $prop
+	transform-origin: $prop
+
+@mixin animation ( $prop... )
+	-webkit-animation: $prop
+	-moz-animation: $prop
+	-ms-animation: $prop
+	-khtml-animation: $prop
+	animation: $prop
+
+@mixin animation-play-state ( $prop... )
+	-webkit-animation-play-state: $prop
+	-moz-animation-play-state: $prop
+	-ms-animation-play-state: $prop
+	-khtml-animation-play-state: $prop
+	animation-play-state: $prop
+
+// CUSTOM MIXINS
+@mixin debug
+	outline: 1px solid red
+
+@mixin debug-b
+	background-color: blue
+	
+@mixin text-stroke ( $color )
+	text-shadow: -1px -1px 0 $color, 1px -1px 0 $color, -1px 1px 0 $color, 1px 1px 0 $color
+
+@mixin background-image-retina ( $imageName, $imageType)
+	background-image: url("#{$imageName}.#{$imageType}")
+	
+	@media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)
+		background-image: url("#{$imageName}@2x.#{$imageType}")
+
+@mixin font-size ( $prop: 16 )
+	font-size: ($prop) + px
+	font-size: ($prop / 10) + rem
+	line-height: ($prop * 1.5) + px
+	line-height: (($prop / 10) * 1.5) + rem
+
+@mixin force-gpu
+	-webkit-transform: translate3d(0, 0, 0)
