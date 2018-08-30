@@ -1,0 +1,59 @@
+<title>Jira GWT Bookmarklet</title>
+
+<style>
+  *, *:before, *:after { box-sizing: border-box; }
+  html, body { font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif; }
+
+  body {
+    background: #c7cfdb;
+    letter-spacing: 0.4;
+    margin: 0;
+  }
+
+  .page {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .instruction {
+    color: #47505e;
+    margin-bottom: 18px;
+    opacity: 0.8;
+  }
+
+  .bookmarklet {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px #8c99ad,
+                0 3px 1px -2px #8c99ad;
+    color: #47505e;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: all 130ms ease-in-out;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
+  .bookmarklet:hover {
+    box-shadow: 0 3px 4px #8c99ad,
+                0 5px 1px -3px #8c99ad;
+    transform: translateY(-2px);
+  }
+</style>
+
+<div class="page">
+  <span class="instruction">
+    Drag the button to your bookmark bar.
+  </span>
+  <a class="bookmarklet" href="javascript:(function()%7Bjavascript%3A%20!function()%7Bvar%20e%3D%22*Outcome*%5CnGiven%20%5CnWhen%20%5CnThen%20%5Cn%5Cn*Todo*%5Cn*%20%5Cn%5Cn*Dev%20notes*%5Cn*%20%22%2Ct%3Ddocument.querySelector('.menu-item%5Bdata-mode%3D%22source%22%5D')%2Cn%3Ddocument.querySelector(%22%23description-wiki-edit%20.textarea%22)%3Bt%26%26!t.classList.contains(%22active-tab%22)%26%26t.querySelector(%22a%22).click()%2C!n%7C%7C%22%22!%3D%3Dn.value.trim()%26%26n.value!%3D%3De%7C%7C(n.value%3De%2Cn.focus()%2Cn.setSelectionRange(16%2C16)%2Cn.style.height%3D%22232px%22%2CsetTimeout(function()%7Bn.scrollTop%3D0%7D%2C10))%7D()%7D)()">
+    MAKE A JIRA
+  </a>
+</div>
